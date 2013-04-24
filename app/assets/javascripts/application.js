@@ -23,6 +23,9 @@
 //= require sessions
 //= require system
 //= require users
+//= require bootstrap.min
+//= require jquery.easy-pie-chart
+//= require easypie
 //= require_self
 
 // JQuery handler to close flash messages
@@ -42,10 +45,12 @@ window.onload=function(){
   e.setAttribute("type", "text/javascript");
   e.setAttribute("src", "http://browser-update.org/update.js");
   document.body.appendChild(e);
+  initPieChart();
 }
-
+/*
 // Google Analytics
 var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview'],['_trackPageLoadTime']];
 (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
 g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
 s.parentNode.insertBefore(g,s)}(document,'script'));
+*/

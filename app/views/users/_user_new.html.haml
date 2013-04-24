@@ -4,11 +4,10 @@
       = t('users.add_user')
     .modalBox-flash
     .modalBox-content
-      %table
+      %table{:class => "table table-bordered table-hover"}
         %tbody
           %tr
             %td
-              = sprite_tag("help", :alt => "?", :class=> "help", :title => t('users.email_help_html'))
               = label_tag "email", t('users.email') + ":"
             %td
               = email_field_tag :email, @email, :size => 50, :required => "required", :autofocus => "autofocus",
@@ -16,7 +15,6 @@
               .form-field-error
           %tr
             %td
-              = sprite_tag("help", :alt => "?", :class=> "help", :title => t('users.password_help_html'))
               = label_tag "password", t('users.password') + ":"
             %td
               = password_field_tag :password, nil, :size => 50, :required => "required",
@@ -24,7 +22,6 @@
               .form-field-error
           %tr
             %td
-              = sprite_tag("help", :alt => "?", :class=> "help", :title => t('users.vpassword_help_html'))
               = label_tag "vpassword", t('users.vpassword') + ":"
             %td
               = password_field_tag :vpassword, nil, :size => 50, :required => "required",

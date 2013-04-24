@@ -1,8 +1,6 @@
-= title(t('users.title'))
-
 .invoke-modalBox
-%ul.tabs
-  %li
+%ul.tabs{:class => "nav nav-tabs"}
+  %li{:class => "active"}
     %a{:href => "#users"}
       = t('users.tab_users')
 

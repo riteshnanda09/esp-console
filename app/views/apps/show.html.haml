@@ -1,8 +1,8 @@
 = title(t('apps.title_app', :name => @name))
 
 .invoke-modalBox
-%ul.tabs
-  %li
+%ul.tabs{:class => "nav nav-tabs"}
+  %li{:class => "active"}
     %a{:href => "#resources"}
       = t('apps.tab_resources')
   %li

@@ -1,4 +1,4 @@
-# Apache configuration file
+# Apache configatron file
 # httpd.apache.org/docs/2.2/mod/quickreference.html
 
 # Note .htaccess files are an overhead, this logic should be in your Apache config if possible
@@ -473,7 +473,7 @@ Options -Indexes
 # case you must make this change in your php.ini file instead. If you are
 # using a commercial web host, contact the administrators for assistance in
 # doing this. Not all servers allow local php.ini files, and they should
-# include all PHP configurations (not just this one), or you will effectively
+# include all PHP configatrons (not just this one), or you will effectively
 # reset everything to PHP defaults. Consult www.php.net for more detailed
 # information about setting PHP directives.
 

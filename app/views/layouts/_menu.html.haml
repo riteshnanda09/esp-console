@@ -1,10 +1,41 @@
 - if @cf_logged_in
   %nav
-    %ul
-      %li#dashboard-menu-link= link_to t('layouts.menu.dashboard'), dashboard_url
-      %li#apps-menu-link= link_to t('layouts.menu.apps'), apps_info_url
-      %li#services-menu-link= link_to t('layouts.menu.services'), services_info_url
-      %li#system-menu-link= link_to t('layouts.menu.system'), system_info_url
-      - if @cf_admin_user
-        - unless @cf_proxy_user
-          %li#users-menu-link= link_to t('layouts.menu.users'), users_info_url
+    %div{:class => "navbar"}
+      %div{:class => "navbar-inner"}
+        %div{:class => "container-fluid"}
+
+ 
+          %button{:type => "button", :class => "btn btn-navbar", "data-toggle" => "collapse", "data-target" => ".nav-collapse"}
+            %span{:class =>"icon-bar"}
+            %span{:class =>"icon-bar"}
+            %span{:class =>"icon-bar"}
+          %div{:class => "nav-collapse collapse"}
+            %button{:type => "button", :class => "btn btn-navbar pull-right", "data-toggle" => "view", "data-target" => ".view-list"}
+            %span{:class =>"icon-th-list"}
+
+            %button{:type => "button", :class => "btn btn-navbar pull-right", "data-toggle" => "view", "data-target" => ".view-cards"}
+            %span{:class =>"icon-th-large"}
+
+
+            %a{:class =>"brand"}= image_tag(configatron.app.logo)
+            %ul{:class => "nav"}
+              %li#dashboard-menu-link= link_to t('layouts.menu.dashboard'), dashboard_url
+              %li#apps-menu-link= link_to t('layouts.menu.apps'), apps_info_url
+              %li#services-menu-link= link_to t('layouts.menu.services'), services_info_url
+              %li#system-menu-link= link_to t('layouts.menu.system'), system_info_url
+              - if @cf_admin_user
+                - unless @cf_proxy_user
+                  %li#users-menu-link= link_to t('layouts.menu.users'), users_info_url
+            - if @cf_logged_in
+              %p{:class =>"pull-right"}
+                = t('layouts.header.welcome', :user => @cf_user)
+                - if @cf_proxy_user
+                  = link_to t('layouts.header.viewas', :user => @cf_proxy_user), user_clear_url
+                = link_to t('layouts.header.logout'), logout_url
+            - else
+              %a= link_to t('layouts.header.login'), login_url
+              - if controller_name == "sessions"
+                = language_selector().html_safe
+
+
+

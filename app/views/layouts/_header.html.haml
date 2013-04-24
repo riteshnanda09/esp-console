@@ -1,17 +1,6 @@
 %hgroup
-  %h1
-    %a{:href => "/"}
-      = image_tag(configatron.brand.logo)
-      = configatron.brand.title
   %section
-    %ul
-      - if @cf_logged_in
-        %li= t('layouts.header.welcome', :user => @cf_user)
-        - if @cf_proxy_user
-          %li= link_to t('layouts.header.viewas', :user => @cf_proxy_user), user_clear_url
-        %li= link_to t('layouts.header.logout'), logout_url
-      - else
-        %li= link_to t('layouts.header.login'), login_url
-        - if controller_name == "sessions"
-          = language_selector().html_safe
-          
+    %div{:class => "masthead"}
+      %h3
+        %a{:href => "/"}
+          = image_tag(configatron.brand.logo)  

@@ -1,7 +1,7 @@
 <%# encoding: utf-8%>
 $(function() {
   if ($('body').hasClass('services')) {
-    $('#services-menu-link').addClass('menu-current');
+    $('#services-menu-link').addClass('active');
     servicesTable_Settings = {
       'bAutoWidth':      false,
       'bLengthChange':   false,
@@ -21,7 +21,7 @@ $(function() {
       onClick: function(event, tabIndex) {
         var tab = this.getCurrentTab().find('a').attr('href');
         if (tab == '#services') {
-          $('.invoke-modalBox').html('<button class="addService" rel="#add_service_modalBox">' + I18n.t('services.js.add_service') + '</button>').toggle();
+          $('.invoke-modalBox').html('<button class="btn btn-primary" rel="#add_service_modalBox">' + I18n.t('services.js.add_service') + '</button>').toggle();
           addService_trigger = $('.addService').overlay({
             'closeOnClick': false,
             'mask': {color: '#404040', loadSpeed: 'normal', opacity: 0.7},

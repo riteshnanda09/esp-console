@@ -1,7 +1,7 @@
 <%# encoding: utf-8%>
 $(function() {
   if ($('body').hasClass('system')) {
-    $('#system-menu-link').addClass('menu-current');
+    $('#system-menu-link').addClass('active');
     systemServicesTable_Settings = {
       'bAutoWidth':      false,
       'bLengthChange':   false,
@@ -11,6 +11,7 @@ $(function() {
       'aoColumnDefs':    [{'sType': 'string', 'aTargets': [0]}]
     };
     systemServicesTable = $('#system-services-table').dataTable(systemServicesTable_Settings);
+
     runtimesTable_Settings = {
       'bAutoWidth':      false,
       'bLengthChange':   false,
@@ -20,6 +21,7 @@ $(function() {
       'aoColumnDefs':    [{'sType': 'string', 'aTargets': [0]}]
     };
     runtimesTable = $('#runtimes-table').dataTable(runtimesTable_Settings);
+
     frameworksTable_Settings = {
       'bAutoWidth':      false,
       'bLengthChange':   false,
@@ -29,6 +31,7 @@ $(function() {
       'aoColumnDefs':    [{'sType': 'string', 'aTargets': [0, 1]}]
     };
     frameworksTable = $('#frameworks-table').dataTable(frameworksTable_Settings);
+    
     var ultabs = $('ul.tabs');
     ultabs.tabs('div.panels > div.panel', {effect: 'slide', tabs: 'li'});
   }

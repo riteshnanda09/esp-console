@@ -1,5 +1,5 @@
-#flash
-  %a.close{:href => "#"}x
+#flash{:class => "alert hidden"}
+  %a.close{:class => "close","data-dismiss" => "alert",:href => "#"}
   #flash-content
     - flash.each do |key, value|
       .message{:class => key}
@@ -11,3 +11,7 @@
       $(function() {
         $('#flash').fadeIn('slow');
       });
+
+
+
+      class="close" data-dismiss="alert"

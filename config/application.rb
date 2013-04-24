@@ -18,7 +18,7 @@ end
 module CfConsole
   class Application < Rails::Application
     # Settings in config/environments/* take precedence over those specified here.
-    # Application configuration should go into files in config/initializers
+    # Application configatron should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
 
     # Custom directories with classes and modules you want to be autoloadable.
@@ -67,6 +67,6 @@ module CfConsole
 
     # Enable this option if you want async http calls
     # Place the FiberPool early in the pipeline (you can see your app's current pipeline using `rake middleware`)
-    #config.middleware.insert_before Rails::Rack::Logger, Rack::FiberPool
+    config.middleware.insert_before Rails::Rack::Logger, Rack::FiberPool
   end
 end

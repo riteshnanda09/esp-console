@@ -1,7 +1,7 @@
 <%# encoding: utf-8%>
 $(function() {
   if ($('body').hasClass('users')) {
-    $('#users-menu-link').addClass('menu-current');
+    $('#users-menu-link').addClass('active');
     usersTable_Settings = {
       'bAutoWidth':      false,
       'bLengthChange':   false,
@@ -21,7 +21,7 @@ $(function() {
       onClick: function(event, tabIndex) {
         var tab = this.getCurrentTab().find('a').attr('href');
         if (tab == '#users') {
-          $('.invoke-modalBox').html('<button class="addUser" rel="#add_user_modalBox">' + I18n.t('users.js.add_user') + '</button>').toggle();
+          $('.invoke-modalBox').html('<button class="btn btn-primary addUser" rel="#add_user_modalBox">' + I18n.t('users.js.add_user') + '</button>').toggle();
           addUser_trigger = $('.addUser').overlay({
             'closeOnClick': false,
             'mask': {color: '#404040', loadSpeed: 'normal', opacity: 0.7},

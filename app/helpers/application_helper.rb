@@ -82,8 +82,8 @@ module ApplicationHelper
   def pretty_size(size, prec = 1)
     return "NA" unless size
     return "#{size} b" if size < 1024
-    return sprintf("%.#{prec}f Kb", size / 1024.0) if size < (1024 * 1024)
-    return sprintf("%.#{prec}f Mb", size / (1024.0 * 1024.0)) if size < (1024 * 1024 * 1024)
+    return sprintf("%.#{prec}d Kb", size / 1024.0) if size < (1024 * 1024)
+    return sprintf("%.#{prec}d Mb", size / (1024.0 * 1024.0)) if size < (1024 * 1024 * 1024)
     return sprintf("%.#{prec}f Gb", size / (1024.0 * 1024.0 * 1024.0))
   end
 

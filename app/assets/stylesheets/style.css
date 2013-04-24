@@ -1,0 +1,148 @@
+#main .modalBox {
+  display: none;
+}
+
+#main .invoke-modalBox {
+  float: right;
+  display: none;
+}
+
+#main .invoke-modalBox .button {
+  display: inline-block;
+  text-decoration: none;
+}
+
+#main div.dataTables_paginate {
+  display: inline-block;
+  float: right;
+  font-size: 14px;
+  padding: 10px;
+}
+
+#main div.dataTables_paginate a{
+  padding-left: 10px;
+}
+
+#main div.dataTables_info {
+  float: left;
+  font-size: 14px;
+  padding: 10px;
+}
+
+p {
+  margin-top: 12px;
+}
+
+#main .modalBox {
+  background-color: #FFFFFF;
+  border: .2em solid #333333;
+  -moz-border-radius: .5em;
+  -ms-border-radius: .5em;
+  -webkit-border-radius: .5em;
+  border-radius: .5em;
+  display: none;
+  padding: .1em;
+  text-align: left;
+}
+
+#main .modalBox .close {
+  @extend img.close;
+  cursor: pointer;
+  position: absolute;
+  right: -15px;
+  top: -10px;
+}
+
+#main .modalBox-title {
+  background-color: #D4D4D4;
+  border-bottom: .1em solid #C7C7C7;
+  font-weight: bold;
+  padding: .3em;
+  text-align: center;
+}
+
+#main .modalBox-flash {
+  display: none;
+}
+
+#main .modalBox-flash .alert {
+  background-image: -moz-linear-gradient(top, #FFC2BB 14%, #F71823 77%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFC2BB', endColorstr='#F71823');
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFC2BB', endColorstr='#F71823')";
+  background-image: -ms-linear-gradient(top, #FFC2BB 14%, #F71823 77%);
+  background-image: -webkit-gradient( linear, left top, left bottom, color-stop(0.14, #FFC2BB), color-stop(0.77, #F71823));
+  background-image: -webkit-linear-gradient(top, #FFC2BB 14%, #F71823 77%);
+  background-image: linear-gradient(top, #FFC2BB 14%, #F71823 77%);
+  border-bottom: .1em solid red;
+  font-weight: bold;
+  margin-bottom: .5em;
+  padding: .3em;
+}
+
+#main .modalBox-content {
+  margin: 1em 0 1em 0;
+}
+
+#main .modalBox-content tr {
+  background-color: #FFFFFF;
+  display: table-row;
+}
+
+#main .modalBox-content td {
+  border: none;
+  display: table-cell;
+  padding: .5em .4em .5em .4em;
+}
+
+#main .modalBox-content td:first-child {
+  padding-left: 2em;
+}
+
+#main .modalBox-content td:last-child {
+  padding-right: 2em;
+}
+
+#main .modalBox-content label {
+  float: right;
+}
+
+#main .modalBox-content .help {
+  float: right;
+  margin-left: .3em;
+}
+
+#main .modalBox-submit {
+  background-color: #E6E7E8;
+  border-top: .1em solid #D4D4D4;
+  padding: .3em;
+  text-align: right;
+}
+
+#main .modalBox-submit input[type="submit"] {
+  background-image: -moz-linear-gradient(top, #75C8F5 14%, #277AAA 77%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#75C8F5', endColorstr='#277AAA');
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#75C8F5', endColorstr='#277AAA')";
+  background-image: -ms-linear-gradient(top, #75C8F5 14%, #277AAA 77%);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0.14, #75C8F5), color-stop(0.77, #277AAA));
+  background-image: -webkit-linear-gradient(top, #75C8F5 14%, #277AAA 77%);
+  background-image: linear-gradient(top, #75C8F5 14%, #277AAA 77%);
+  border: .1em solid #666666;
+  -moz-border-radius: .5em;
+  -ms-border-radius: .5em;
+  -webkit-border-radius: .5em;
+  border-radius: .5em;
+  color: #FFFFFF;
+  padding: .3em;
+  text-align: center;
+  text-decoration: none;
+}
+
+#main .modalBox-submit input[type="submit"]:hover {
+  background-image: -moz-linear-gradient(top, #9DD6F5 14%, #508BAB 77%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#9DD6F5', endColorstr='#508BAB');
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#9DD6F5', endColorstr='#508BAB')";
+  background-image: -ms-linear-gradient(top, #9DD6F5 14%, #508BAB 77%);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0.14, #9DD6F5), color-stop(0.77, #508BAB));
+  background-image: -webkit-linear-gradient(top, #9DD6F5 14%, #508BAB 77%);
+  background-image: linear-gradient(top, #9DD6F5 14%, #508BAB 77%);
+}

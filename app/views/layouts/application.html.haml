@@ -7,21 +7,17 @@
   = render "layouts/head"
 
 %body{:class => "#{controller_name} #{action_name}" }
-  = render "layouts/forkapp"
+  %div.container
+    %header#header
+      = render "layouts/header"
 
-  %header#header
-    = render "layouts/header"
+    #menu
+      = render "layouts/menu"
 
-  #menu
-    = render "layouts/menu"
+    #main{:role => "main"}
+      = render "layouts/flashes"
+      = yield
 
-  #main{:role => "main"}
-    %h1 #{ yield(:title) }
-    = render "layouts/flashes"
-    = yield
-
-  %footer#footer
-    = render "layouts/footer"
-
+  
   = render "layouts/javascripts"
 

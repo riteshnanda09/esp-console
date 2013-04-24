@@ -1,15 +1,13 @@
-= title(t('dashboard.title'))
-
-%ul.tabs
-  %li
+%ul.tabs{:class => "nav nav-tabs"}
+  %li{:class => "active"}
     %a{:href => "#account"}
       = t('dashboard.tab_account')
   %li
     %a{:href => "#apps"}
       = t('dashboard.tab_apps')
 
-%div.panels
-  %div.panel
+%div.panels{:class => "row-fluid"}
+  %div.panel{:class => "span12"}
     = render "account_overview"
-  %div.panel
+  %div.panel{:class => "span12"}
     = render "apps_overview"

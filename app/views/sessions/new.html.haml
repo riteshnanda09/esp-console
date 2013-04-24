@@ -1,16 +1,13 @@
-= title(t('sessions.title'))
-
 %section#login
   #registered-users
     #shadow_box_content
       %p
         %b= t('sessions.enter_credentials')
       = form_tag login_url, :id => "new-session-form" do
-        %table
+        %table{:class => "table table-bordered table-hover"}
           %tbody
             %tr
               %td
-                = sprite_tag("help", :alt => "?", :class=> "help", :title => t('sessions.email_help_html'))
                 = label_tag :email, t('sessions.email')
               %td
                 = email_field_tag :email, @email, :size => 35, :required => "required", :autofocus => "autofocus",
@@ -18,7 +15,6 @@
                 .form-field-error
             %tr
               %td
-                = sprite_tag("help", :alt => "?", :class=> "help", :title => t('sessions.password_help_html'))
                 = label_tag :password, t('sessions.password')
               %td
                 = password_field_tag :password, nil, :size => 35, :required => "required",
@@ -26,7 +22,6 @@
                 .form-field-error
             %tr
               %td
-                = sprite_tag("help", :alt => "?", :class=> "help", :title => t('sessions.provider_help_html'))
                 = label_tag :cloud_service, t('sessions.provider')
               %td
                 = select_tag :cloud_service, options_for_select(@available_targets, @selected_target),
@@ -41,13 +36,12 @@
                 .form-field-error
             %tr
               %td
-                = sprite_tag("help", :alt => "?", :class=> "help", :title => t('sessions.remember_help_html'))
                 = label_tag :remember_me, t('sessions.remember')
               %td
                 = check_box_tag :remember_me, true, @remember_me
             %tr
               %td{:colspan => 2}
-                = submit_tag t('sessions.login')
+                = submit_tag t('sessions.login'), :class => 'btn btn-primary'
   #new-users
     #shadow_box_content
       %p

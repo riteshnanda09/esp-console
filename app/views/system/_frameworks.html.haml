@@ -1,11 +1,8 @@
-%table#frameworks-table
+%table#frameworks-table{:class => "table table-bordered table-hover"}
   %thead
     %tr
-      %th.thsort{:scope => "col", :rowspan => 2}
+      %th.thsort{:scope => "col"}
         = t('system.frameworks.framework_head')
-      %th.thcenter{:scope => "col", :colspan => 3}
-        = t('system.frameworks.runtimes_head')
-    %tr
       %th.thsort{:scope => "col"}
         = t('system.frameworks.name_head')
       %th.thsort{:scope => "col"}

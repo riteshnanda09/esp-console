@@ -3,18 +3,16 @@
     .modalBox-title=t('apps.upload_bits')
     .modalBox-flash
     .modalBox-content
-      %table
+      %table{:class => "table table-bordered table-hover"}
         %tbody
           %tr
             %td
-              = sprite_tag("help", :alt => "?", :class=> "help", :title => t('apps.deploy_from_help_html'))
               = label_tag "deployfrom", t('apps.deploy_from') + ":"
             %td
               = radio_button_tag :deployfrom, 'git', true, :disabled => true
               = t('apps.git')
           %tr
             %td
-              = sprite_tag("help", :alt => "?", :class=> "help", :title => t('apps.git_repo_help_html'))
               = label_tag "gitrepo", t('apps.git_repo') + ":"
             %td
               = text_field_tag :gitrepo, @gitrepo, :size => 50, :required => "required", :autofocus => "autofocus",
@@ -24,7 +22,6 @@
               .form-field-error
           %tr
             %td
-              = sprite_tag("help", :alt => "?", :class=> "help", :title => t('apps.git_branch_help_html'))
               = label_tag "gitrepo", t('apps.git_branch') + ":"
             %td
               = text_field_tag :gitbranch, @gitbranch, :size => 20, :placeholder => t('apps.git_branch_placeholder')

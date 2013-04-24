@@ -3,7 +3,7 @@
   %td
     %span{:id => "app-" + app_item[:name] + "-tooltip"}= health(app_item).html_safe
     %div.tooltip{:id => "app-" + app_item[:name] + "-tooltipbox"}
-      %table
+      %table{:class => "table table-bordered table-hover"}
         %thead
           %tr
             %th.thcenter{:scope => "col"}=t('apps.state_head')
@@ -35,6 +35,7 @@
     - if git_deploy_available?
       = link_to sprite_tag("update-bits", :title => t('apps.upload_bits'), :class => "update-bits icon-tip"),
         app_update_bits_url(app_item[:name]), :rel => "#update_application_bits_modalBox", :class => "uploadAppBits"
+    
     = link_to sprite_tag("delete", :title => t('apps.delete_app'), :class => "delete icon-tip"),
       app_delete_url(app_item[:name]), :id => "delete-app-link", :remote => true,
       :method => :delete, :data => { :confirm => t('apps.delete_app_confirm') }

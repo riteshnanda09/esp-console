@@ -17,7 +17,7 @@
 
   #app-files-contents
     - if @app_files
-      %table#app-files-table
+      %table#app-files-table{:class => "table table-bordered table-hover"}
         %thead
           %tr
             %th{:scope => "col"}=t('apps.files.name_head')

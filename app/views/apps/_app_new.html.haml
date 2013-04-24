@@ -3,11 +3,10 @@
     .modalBox-title=t('apps.add_app')
     .modalBox-flash
     .modalBox-content
-      %table
+      %table{:class => "table table-bordered table-hover"}
         %tbody
           %tr
             %td
-              = sprite_tag("help", :alt => "?", :class=> "help", :title => t('apps.name_help_html'))
               = label_tag "name", t('apps.name') + ":"
             %td
               = text_field_tag :name, @name, :size => 50, :required => "required", :autofocus => "autofocus",
@@ -15,14 +14,12 @@
               .form-field-error
           %tr
             %td
-              = sprite_tag("help", :alt => "?", :class=> "help", :title => t('apps.instances_num_help_html'))
               = label_tag "instances", t('apps.instances_num') + ":"
             %td
               = number_field_tag :instances, @instances, :min => 1, :max => @available_instances, :required => "required"
               .form-field-error
           %tr
             %td
-              = sprite_tag("help", :alt => "?", :class=> "help", :title => t('apps.memory_size_help_html'))
               = label_tag "memsize", t('apps.memory_size') + ":"
             %td
               = select_tag :memsize, options_for_select(@available_memsizes), :required => "required",
@@ -30,7 +27,6 @@
               .form-field-error
           %tr
             %td
-              = sprite_tag("help", :alt => "?", :class=> "help", :title => t('apps.type_help_html'))
               = label_tag "type", t('apps.type') + ":"
             %td
               = select_tag :type, options_for_select(@available_frameworks), :required => "required",
@@ -38,18 +34,16 @@
               .form-field-error
           %tr
             %td
-              = sprite_tag("help", :alt => "?", :class=> "help", :title => t('apps.url_help_html'))
               = label_tag "url", t('apps.url') + ":"
             %td
               = url_field_tag :url, @url, :size => 50, :required => "required", :placeholder => t('apps.url_placeholder')
               .form-field-error
     .modalBox-title=t('apps.optional_data')
     .modalBox-content
-      %table
+      %table{:class => "table table-bordered table-hover"}
         %tbody
           %tr
             %td
-              = sprite_tag("help", :alt => "?", :class=> "help", :title => t('apps.bind_service_help_html'))
               = label_tag "service", t('apps.bind_service') + ":"
             %td
               = select_tag :service, options_for_select(@available_services), :class => "service-chosen", :style => "width: 300px;"
@@ -57,14 +51,12 @@
           - if git_deploy_available?
             %tr
               %td
-                = sprite_tag("help", :alt => "?", :class=> "help", :title => t('apps.deploy_from_help_html'))
                 = label_tag "deployfrom", t('apps.deploy_from') + ":"
               %td
                 = radio_button_tag :deployfrom, 'git', true, :disabled => true
                 = t('apps.git')
             %tr
               %td
-                = sprite_tag("help", :alt => "?", :class=> "help", :title => t('apps.git_repo_help_html'))
                 = label_tag "gitrepo", t('apps.git_repo') + ":"
               %td
                 = text_field_tag :gitrepo, @gitrepo, :size => 50, :placeholder => t('apps.git_repo_placeholder'),
@@ -73,7 +65,6 @@
                 .form-field-error
             %tr
               %td
-                = sprite_tag("help", :alt => "?", :class=> "help", :title => t('apps.git_branch_help_html'))
                 = label_tag "gitrepo", t('apps.git_branch') + ":"
               %td
                 = text_field_tag :gitbranch, @gitbranch, :size => 20, :placeholder => t('apps.git_branch_placeholder')

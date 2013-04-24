@@ -1,7 +1,7 @@
 <%# encoding: utf-8%>
 $(function() {
   if ($('body').hasClass('apps') && $('body').hasClass('show')) {
-    $('#apps-menu-link').addClass('menu-current');
+    $('#apps-menu-link').addClass('active');
     appInstancesTable_Settings = {
       'bAutoWidth':      false,
       'bLengthChange':   false,
@@ -138,7 +138,7 @@ $(function() {
           $('.invoke-modalBox').empty().hide();
         }
         if (tab == '#envvars') {
-          $('.invoke-modalBox').html('<button class="addEnvvar" rel="#add_envvar_modalBox">' + I18n.t('apps.js.add_envvar') + '</button>').show();
+          $('.invoke-modalBox').html('<button class="btn btn-primary addEnvvar" rel="#add_envvar_modalBox">' + I18n.t('apps.js.add_envvar') + '</button>').show();
           if (typeof appEnvvarsTable == 'undefined') {
             appEnvvarsTable_Settings = {
               'bAutoWidth':      false,
@@ -197,7 +197,7 @@ $(function() {
           $('#app-envvars-table .icon-tip').tooltip({'effect': 'fade', 'tipClass': 'help-tip'});
         }
         if (tab == '#services') {
-          $('.invoke-modalBox').html('<button class="bindService" rel="#bind_service_modalBox">' + I18n.t('apps.js.add_service') + '</button>').show();
+          $('.invoke-modalBox').html('<button class="btn btn-primary bindService" rel="#bind_service_modalBox">' + I18n.t('apps.js.add_service') + '</button>').show();
           bindService_trigger = $('.bindService').overlay({
             'closeOnClick': false,
             'mask': {color: '#404040', loadSpeed: 'normal', opacity: 0.7},
@@ -212,7 +212,7 @@ $(function() {
           $('#app-services-table .icon-tip').tooltip({'effect': 'fade', 'tipClass': 'help-tip'});
         }
         if (tab == '#urls') {
-          $('.invoke-modalBox').html('<button class="addURL" rel="#add_url_modalBox">' + I18n.t('apps.js.add_url') + '</button>').show();
+          $('.invoke-modalBox').html('<button class="btn btn-primary addURL" rel="#add_url_modalBox">' + I18n.t('apps.js.add_url') + '</button>').show();
           addURL_trigger = $('.addURL').overlay({
             'closeOnClick': false,
             'mask': {color: '#404040', loadSpeed: 'normal', opacity: 0.7},

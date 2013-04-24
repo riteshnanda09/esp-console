@@ -1,9 +1,12 @@
 # Put all your default configatron settings here.
 
 # Branding
-configatron.brand.logo = "cflogo.png"
-configatron.brand.title = "CF Console"
-configatron.brand.author = "Ferran Rodenas"
+configatron.brand.logo = "elogo.png"
+configatron.brand.title = "Ericsson AB"
+configatron.brand.author = "ejohsel"
+
+configatron.app.logo = "esp-icon24.png"
+configatron.app.title = "ESP"
 
 # Sets the available Cloud Foundry providers showed at login page.
 # Admits dynamic parameters for the Cloud Controller URL.

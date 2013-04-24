@@ -3,11 +3,10 @@
     .modalBox-title=t('apps.envvars.add_envvar')
     .modalBox-flash
     .modalBox-content
-      %table
+      %table{:class => "table table-bordered table-hover"}
         %tbody
           %tr
             %td
-              = sprite_tag("help", :alt => "?", :class=> "help", :title => t('apps.envvars.name_help_html'))
               = label_tag "name", t('apps.envvars.name') + ":"
             %td
               = text_field_tag :var_name, nil, :size => 30, :required => "required", :autofocus => "autofocus",
@@ -16,7 +15,6 @@
               .form-field-error
           %tr
             %td
-              = sprite_tag("help", :alt => "?", :class=> "help", :title => t('apps.envvars.value_help_html'))
               = label_tag "value", t('apps.envvars.value') + ":"
             %td
               = text_field_tag :var_value, nil, :size => 30, :placeholder => t('apps.envvars.value_placeholder')
@@ -24,7 +22,6 @@
           - if @app[:state] == "STARTED"
             %tr
               %td
-                = sprite_tag("help", :alt => "?", :class=> "help", :title => t('apps.envvars.restart_app_help'))
                 = label_tag "restart", t('apps.envvars.restart_app') + ":"
               %td
                 = check_box_tag :restart, true, true
