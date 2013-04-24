@@ -6,18 +6,17 @@ CF-Console is an easy-to-use web-based interface for your [Cloud Foundry](http:/
 Continuous Integration
 ----------------------
 
-[![Build Status](https://secure.travis-ci.org/frodenas/cf-console.png)](http://travis-ci.org/frodenas/cf-console)
 
 Demo
 ----
-Check [CF-Console at cloudfoundry.com](http://cf-console.cloudfoundry.com/).
+Check [esp-console at cloudfoundry.com](http://esp-console.cloudfoundry.com/).
 
 Deploy to CloudFoundry
 ----------------------
 
 ```
-git clone git://github.com/frodenas/cf-console.git
-cd cf-console
+git clone git://gitlab.egi.ericsson.com/paas/console.git
+cd console
 bundle
 bundle exec rake assets:precompile
 vmc push --runtime ruby19
@@ -28,7 +27,7 @@ Installation
 ------------
 No DB required, just clone the project and start the server:
 
-* git clone git://github.com/frodenas/cf-console.git
+* git clone git://gitlab.egi.ericsson.com/paas/console.git
 * bundle install
 * thin start <- It must be an app server with EventMachine and Ruby 1.9 support
 (e.g. [Thin](http://code.macournoyer.com/thin/) or [Rainbows!](http://rainbows.rubyforge.org/))
@@ -73,7 +72,7 @@ Here are some ways *you* can contribute:
 
 Submitting an Issue
 -------------------
-We use the [GitHub issue tracker](http://github.com/frodenas/cf-console/issues) to track bugs and features.
+We use the [GitLab issue tracker](http://gitlab.egi.ericsson.com/paas/console.git) to track bugs and features.
 Before submitting a bug report or feature request, check to make sure it hasn't already been submitted. You can indicate
 support for an existing issue by voting it up. When submitting a bug report, please include a
 [Gist](http://gist.github.com/) that includes a stack trace and any details that may be necessary to reproduce the bug,
@@ -94,7 +93,8 @@ Submitting a Pull Request
 Authors
 -------
 
-By [Ferran Rodenas](http://www.rodenas.org/) <frodenas@gmail.com>
+Originally by [Ferran Rodenas](http://www.rodenas.org/) <frodenas@gmail.com>
+Forked and modified by [Johan Sellström](mailto:johan.sellstrom@ericsson.com) 
 
 Copyright
 ---------
