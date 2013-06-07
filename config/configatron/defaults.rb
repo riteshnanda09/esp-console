@@ -12,7 +12,7 @@ configatron.app.title = "ESP"
 # Admits dynamic parameters for the Cloud Controller URL.
 # Just put the parameter (only one) between brackets "{}" and the login page will ask the user for that parameter.
 configatron.available_targets = []
-configatron.available_targets << ["Local CloudFoundry", "http://api.vcap.me"]
+configatron.available_targets << ["ESP", "http://api.esp.egi.ericsson.com"]
 configatron.available_targets << ["AppFog (AWS service)", "http://api.aws.af.cm"]
 configatron.available_targets << ["AppFog (HP Cloud service)", "http://api.hp.af.cm"]
 configatron.available_targets << ["AppFog (Joyent service)", "http://api.joyent.af.cm"]

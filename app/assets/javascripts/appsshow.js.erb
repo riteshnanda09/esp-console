@@ -137,6 +137,9 @@ $(function() {
         if (tab == '#crashes') {
           $('.invoke-modalBox').empty().hide();
         }
+        if (tab == '#monitor') {
+          $('.invoke-modalBox').empty().hide();
+        }
         if (tab == '#envvars') {
           $('.invoke-modalBox').html('<button class="btn btn-primary addEnvvar" rel="#add_envvar_modalBox">' + I18n.t('apps.js.add_envvar') + '</button>').show();
           if (typeof appEnvvarsTable == 'undefined') {
@@ -224,10 +227,17 @@ $(function() {
           $('#app-urls-table .icon-tip').tooltip({'effect': 'fade', 'tipClass': 'help-tip'});
         }
         if (tab == '#files') {
+          /*
           if (typeof app_download_bits_url == 'undefined') {
             $('.invoke-modalBox').empty().hide();
           } else {
             $('.invoke-modalBox').html('<a href="' + app_download_bits_url + '" class="button">' + I18n.t('apps.js.download_bits') + '</a>').show();
+          }
+*/
+          if (typeof app_clone_bits_url == 'undefined') {
+            $('.invoke-modalBox').empty().hide();
+          } else {
+            $('.invoke-modalBox').html('<a href="' + app_clone_bits_url + '" class="button">' + I18n.t('apps.js.clone_bits') + '</a>').show();
           }
         }
       }

@@ -16,7 +16,7 @@ gem 'i18n-js', :git => 'https://github.com/fnando/i18n-js.git'
 gem 'routing-filter', '~> 0.3.1'
 
 group :assets do
-  gem 'sass-rails', '~> 3.2.5'
+  gem 'sass-rails'
   gem 'uglifier', '~> 1.3.0'
   gem 'sprite-factory', '~> 1.5.1'
   gem 'chunky_png', '~> 1.2.6'

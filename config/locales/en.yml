@@ -7,9 +7,9 @@ en:
   dashboard:
     title: "Dashboard"
     tab_account: "Account"
-    tab_apps: "Applications"
+    tab_apps: "Apps"
     account:
-      apps: "Applications"
+      apps: "Apps"
       apps_help_html: "Number of running applications allowed for your account."
       memory: "Memory"
       memory_help_html: "Amount of memory resources allowed for your account."
@@ -19,13 +19,16 @@ en:
       unused: "%{unused}"
       total: "%{total}"
     apps:
-      apps_states: "Application's States"
+      apps_states: "App's States"
       instances_states: "Instance's States"
-      apps_types: "Types of Application"
+      apps_types: "Types of Apps"
+  appstore:
+    title: "AppStore"
   apps:
-    title: "Applications"
-    title_app: "Application details for \"%{name}\""
-    tab_apps: "Applications"
+    title: "Apps"
+    title_app: "App details for \"%{name}\""
+    tab_apps: "Apps"
+    tab_monitor: "Monitor"
     tab_resources: "Resources"
     tab_instances: "Instances"
     tab_crashes: "Crashes"
@@ -146,7 +149,8 @@ en:
       add_envvar: "Add Var"
       add_service: "Bind Service"
       add_url: "Map URL"
-      download_bits: "Download Application"
+      clone_bits: "Clone App"
+      download_bits: "Download App"
     controller:
       url_blank: "URL cannot be blank."
       type_blank: "Type of application cannot be blank."
@@ -339,8 +343,8 @@ en:
       description: "Manage all your CF instances"
     menu:
       dashboard: "Dashboard"
-      appstore: "App Store"
-      apps: "Applications"
+      appstore: "AppStore"
+      apps: "Apps"
       services: "Services"
       templates: "Templates"
       system: "System"

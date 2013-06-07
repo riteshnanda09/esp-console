@@ -26,6 +26,7 @@
 //= require bootstrap.min
 //= require jquery.easy-pie-chart
 //= require easypie
+//= require gauge
 //= require_self
 
 // JQuery handler to close flash messages
@@ -45,6 +46,12 @@ window.onload=function(){
   e.setAttribute("type", "text/javascript");
   e.setAttribute("src", "http://browser-update.org/update.js");
   document.body.appendChild(e);
+
+  var e = document.createElement("script");
+  e.setAttribute("type", "text/javascript");
+  e.setAttribute("src", "http://mbostock.github.com/d3/d3.js");
+  document.body.appendChild(e);
+  initializeGauges();
   initPieChart();
 }
 /*

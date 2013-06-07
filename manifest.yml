@@ -1,13 +1,9 @@
 ---
 applications:
-  .:
-    name: cf-console
-    framework:
-      name: rails3
-      info:
-        mem: 256M
-        description: Rails Application
-        exec: 
-    url: ${name}.${target-base}
-    mem: 256M
-    instances: 1
+- name: espconsole
+  framework: rails3
+  runtime: ruby19
+  memory: 512M
+  instances: 2
+  url: espconsole.${target-base}
+  path: .
